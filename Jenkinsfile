@@ -27,7 +27,7 @@ pipeline {
       stage('Build Docker image') { 
           steps{
                 script {
-                   dockerImage = docker.build hameedtech22/julyjavaimage:v3
+                   dockerImage = docker.build + ":$BUILD_NUMBER"
                           }
                       }
                 }
